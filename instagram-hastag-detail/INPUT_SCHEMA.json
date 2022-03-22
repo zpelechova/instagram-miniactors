@@ -1,0 +1,16 @@
+{
+    "title": "Input schema for Instagram hashtag scraper",
+    "description": "Set up Instagram hashtag scraper to get posts from you hashtag search. <br/> Get data from Instagram profiles <br/> <strong>Important: This scraper doesn't extract emails or any other contact details!</strong> <br/>",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "hashtags": {
+            "title": "Hashtags",
+            "type": "array",
+            "description": "Provide a hashtag for your search, doesn't matter if you use the # symbol or not.",
+            "editor": "stringList",
+            "prefill": ["webscraping"]
+        }
+    },
+    "required": ["hashtags"]
+}

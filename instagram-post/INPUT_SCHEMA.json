@@ -1,0 +1,24 @@
+{
+    "title": "Input schema for Instagram profile scraper",
+    "description": "Set up Instagram profile scraper to get posts from Instagram profile URL. Get data from Instagram profiles <br/> <strong>Important: This scraper doesn't extract emails or any other contact details!</strong> <br/>",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "username": {
+            "title": "Instagram username",
+            "type": "array",
+            "description": "Provide a profile URL of the account you want to scrape the posts from.",
+            "editor": "stringList",
+            "prefill": ["apifytech"]
+        },
+        "resultsLimit": {
+            "title": "Maximum posts",
+            "type": "integer",
+            "description": "How many posts you want to maximally scrape from each profile. If you set this to 5, you will get 5 posts for each URL provided (if you provide 2 URLs you will get 10 results altogether.",
+            "editor": "number",
+            "unit": "per page",
+            "prefill": 20
+        }
+    },
+    "required": ["username"]
+}

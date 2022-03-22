@@ -1,0 +1,26 @@
+{
+    "title": "Input schema for Instagram Posts scraper",
+    "description": "Get comments from Instagram posts <br/> <strong>Important: This scraper doesn't extract emails or any other contact details!</strong> <br/>",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "directUrls": {
+            "title": "Add Instagram Post URL(s) you want to scrape the comments from",
+            "type": "array",
+            "description": "Add one or more Instagram URLs to scrape.",
+            "editor": "stringList",
+            "placeholderValue": "URL",
+            "prefill": ["https://www.instagram.com/p/CH-MgQOn-7E/", "https://www.instagram.com/p/Bi-hISIghYe/"],
+            "patternValue": "https:\\/\\/www\\.instagram\\.com\\/.+",
+            "uniqueItems": true
+        },
+        "resultsLimit": {
+            "title": "Maximum comments",
+            "type": "integer",
+            "description": "How many comments you want to maximally scrape from each post. If you set this to 5, you will get 5 comments for each URL provided (if you provide 2 URLs you will get 10 results altogether.",
+            "editor": "number",
+            "unit": "per page",
+            "prefill": 24
+        }
+    }   
+}
