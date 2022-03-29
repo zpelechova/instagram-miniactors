@@ -32,29 +32,19 @@
             "component": "table",
             "columns": [
               {
-                "label": "Post",
-                "format": "image",
-                "field": "$displayUrl"
-              },
-              {
                 "label": "Position",
                 "format": "number",
                 "field": "position"
               },
               {
+                "label": "Post",
+                "format": "image",
+                "field": "$displayUrl"
+              },
+              {
                 "label": "Text",
                 "format": "text",
                 "field": "caption"
-              },
-              {
-                "label": "Author",
-                "format": "text",
-                "field": "ownerFullName"
-              },
-              {
-                "label": "Author username",
-                "format": "text",
-                "field": "ownerUsername"
               },
               {
                 "label": "Post URL",
@@ -80,6 +70,16 @@
                 "label": "Posted on",
                 "format": "text",
                 "field": "timestamp"
+              },
+              {
+                "label": "Author",
+                "format": "text",
+                "field": "ownerFullName"
+              },
+              {
+                "label": "Author username",
+                "format": "text",
+                "field": "ownerUsername"
               }
             ]
           }

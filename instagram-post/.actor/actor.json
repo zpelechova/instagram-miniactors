@@ -1,13 +1,13 @@
 {
     "actorSpecification": 1,
-    "name": "instagram-post-scraper",
-    "title": "Instagram post Scraper",
-    "description": "Scrapes Instagram posts.",
+    "name": "instagram-hashtag-scraper",
+    "title": "Instagram hashtag Scraper",
+    "description": "Scrapes Instagram posts based on Hashtag",
     "version": "0.0.1",
     "storages": {
       "dataset": {
         "actorSpecification": 1,
-        "title": "Instagram Post Scraper",
+        "title": "Instagram Hashtag Scraper",
         "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
         "views": {
           "overview": {
@@ -32,29 +32,19 @@
               "component": "table",
               "columns": [
                 {
-                  "label": "Post",
-                  "format": "image",
-                  "field": "$displayUrl"
-                },
-                {
                   "label": "Position",
                   "format": "number",
                   "field": "position"
                 },
                 {
+                  "label": "Post",
+                  "format": "image",
+                  "field": "$displayUrl"
+                },
+                {
                   "label": "Text",
                   "format": "text",
                   "field": "caption"
-                },
-                {
-                  "label": "Author",
-                  "format": "text",
-                  "field": "ownerFullName"
-                },
-                {
-                  "label": "Author username",
-                  "format": "text",
-                  "field": "ownerUsername"
                 },
                 {
                   "label": "Post URL",
@@ -80,6 +70,16 @@
                   "label": "Posted on",
                   "format": "text",
                   "field": "timestamp"
+                },
+                {
+                  "label": "Author",
+                  "format": "text",
+                  "field": "ownerFullName"
+                },
+                {
+                  "label": "Author username",
+                  "format": "text",
+                  "field": "ownerUsername"
                 }
               ]
             }
