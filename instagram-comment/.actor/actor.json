@@ -49,7 +49,7 @@
               },              {
                 "label": "Post URL",
                 "format": "link",
-                "field": "$#debug.request.url"
+                "field": "$debug.request.url"
               }
             ]
           }
