@@ -30,8 +30,8 @@
             "component": "table",
             "columns": [
 
-              { "label": "position", "format": "text", "field": "position" },
-              { "label": "text", "format": "text", "field": "text" },
+              { "label": "Position", "format": "text", "field": "position" },
+              { "label": "Text", "format": "text", "field": "text" },
               {
                 "label": "Commenter",
                 "format": "text",

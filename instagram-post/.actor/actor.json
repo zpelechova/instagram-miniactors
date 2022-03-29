@@ -1,87 +1,91 @@
 {
     "actorSpecification": 1,
-    "name": "instagram-profile-scraper",
-    "title": "Instagram Profile Scraper",
-    "description": "Scrapes Instagram profiles",
+    "name": "instagram-post-scraper",
+    "title": "Instagram post Scraper",
+    "description": "Scrapes Instagram posts.",
     "version": "0.0.1",
     "storages": {
-        "dataset": {
-            "actorSpecification": 1,
-            "title": "Instagram Profile Scraper",
-            "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
-            "views": {
-                "overview": {
-                    "title": "Overview",
-                    "description": "",
-                    "transformation": {
-                        "fields": [
-                            "fullName",
-                            "profilePicUrl",
-                            "#debug",
-                            "username",
-                            "postsCount",
-                            "followersCount",
-                            "followsCount",
-                            "private",
-                            "verified",
-                            "isBusinessAccount",
-                            "biography"
-                        ]
-                    },
-                    "display": {
-                        "component": "table",
-                        "columns": [
-                            {
-                                "label": "Name",
-                                "format": "textWithImage",
-                                "field": "$fullName",
-                                "imageUrlField": "$profilePicUrl"
-                            },
-                            {
-                                "label": "Username",
-                                "format": "link",
-                                "field": "$#debug.request.url",
-                                "textField": "$username"
-                            },
-                            {
-                                "label": "Posts",
-                                "format": "number",
-                                "field": "postsCount"
-                            },
-                            {
-                                "label": "Followers",
-                                "format": "number",
-                                "field": "followersCount"
-                            },
-                            {
-                                "label": "Following",
-                                "format": "number",
-                                "field": "followsCount"
-                            },
-                            {
-                                "label": "Private",
-                                "format": "text",
-                                "field": "private"
-                            },
-                            {
-                                "label": "Verified",
-                                "format": "text",
-                                "field": "verified"
-                            },
-                            {
-                                "label": "Business",
-                                "format": "text",
-                                "field": "isBusinessAccount"
-                            },
-                            {
-                                "label": "Bio",
-                                "format": "text",
-                                "field": "biography"
-                            }
-                        ]
-                    }
+      "dataset": {
+        "actorSpecification": 1,
+        "title": "Instagram Post Scraper",
+        "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
+        "views": {
+          "overview": {
+            "title": "Overview",
+            "description": "",
+            "transformation": {
+              "fields": [
+                "displayUrl",
+                "position",
+                "caption",
+                "ownerFullName",
+                "ownerUsername",
+                "url",
+                "commentsCount",
+                "firstComment",
+                "likesCount",
+                "timestamp",
+                "queryTag"
+              ]
+            },
+            "display": {
+              "component": "table",
+              "columns": [
+                {
+                  "label": "Post",
+                  "format": "image",
+                  "field": "$displayUrl"
+                },
+                {
+                  "label": "Position",
+                  "format": "number",
+                  "field": "position"
+                },
+                {
+                  "label": "Text",
+                  "format": "text",
+                  "field": "caption"
+                },
+                {
+                  "label": "Author",
+                  "format": "text",
+                  "field": "ownerFullName"
+                },
+                {
+                  "label": "Author username",
+                  "format": "text",
+                  "field": "ownerUsername"
+                },
+                {
+                  "label": "Post URL",
+                  "format": "text",
+                  "field": "url"
+                },
+                {
+                  "label": "Number of comments",
+                  "format": "text",
+                  "field": "commentsCount"
+                },
+                {
+                  "label": "First comment",
+                  "format": "text",
+                  "field": "firstComment"
+                },
+                {
+                  "label": "Number of likes",
+                  "format": "text",
+                  "field": "likesCount"
+                },
+                {
+                  "label": "Posted on",
+                  "format": "text",
+                  "field": "timestamp"
                 }
+              ]
             }
+          }
         }
+      }
     }
-}
+  }
+  
