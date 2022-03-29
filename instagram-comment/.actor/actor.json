@@ -1,0 +1,60 @@
+{
+  "actorSpecification": 1,
+  "name": "instagram-comment-scraper",
+  "title": "Instagram Comment Scraper",
+  "description": "Scrapes Instagram comments",
+  "version": "0.0.1",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Instagram Comment Scraper",
+      "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "description": "",
+          "transformation": {
+            "fields": [
+              "postId",
+              "shortCode",
+              "text",
+              "position",
+              "timestamp",
+              "ownerId",
+              "ownerIsVerified",
+              "ownerUsername",
+              "ownerProfilePicUrl"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "columns": [
+
+              { "label": "position", "format": "text", "field": "position" },
+              { "label": "text", "format": "text", "field": "text" },
+              {
+                "label": "Commenter",
+                "format": "text",
+                "field": "ownerUsername"
+              },
+              {
+                "label": "Commenter profile picture",
+                "format": "image",
+                "field": "ownerProfilePicUrl"
+              },
+              {
+                "label": "Commented on",
+                "format": "date",
+                "field": "timestamp"
+              },              {
+                "label": "Post URL",
+                "format": "link",
+                "field": "$#debug.request.url"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

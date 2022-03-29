@@ -1,0 +1,87 @@
+{
+    "actorSpecification": 1,
+    "name": "instagram-profile-scraper",
+    "title": "Instagram Profile Scraper",
+    "description": "Scrapes Instagram profiles",
+    "version": "0.0.1",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "Instagram Profile Scraper",
+            "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
+            "views": {
+                "overview": {
+                    "title": "Overview",
+                    "description": "",
+                    "transformation": {
+                        "fields": [
+                            "fullName",
+                            "profilePicUrl",
+                            "#debug",
+                            "username",
+                            "postsCount",
+                            "followersCount",
+                            "followsCount",
+                            "private",
+                            "verified",
+                            "isBusinessAccount",
+                            "biography"
+                        ]
+                    },
+                    "display": {
+                        "component": "table",
+                        "columns": [
+                            {
+                                "label": "Name",
+                                "format": "textWithImage",
+                                "field": "$fullName",
+                                "imageUrlField": "$profilePicUrl"
+                            },
+                            {
+                                "label": "Username",
+                                "format": "link",
+                                "field": "$#debug.request.url",
+                                "textField": "$username"
+                            },
+                            {
+                                "label": "Posts",
+                                "format": "number",
+                                "field": "postsCount"
+                            },
+                            {
+                                "label": "Followers",
+                                "format": "number",
+                                "field": "followersCount"
+                            },
+                            {
+                                "label": "Following",
+                                "format": "number",
+                                "field": "followsCount"
+                            },
+                            {
+                                "label": "Private",
+                                "format": "text",
+                                "field": "private"
+                            },
+                            {
+                                "label": "Verified",
+                                "format": "text",
+                                "field": "verified"
+                            },
+                            {
+                                "label": "Business",
+                                "format": "text",
+                                "field": "isBusinessAccount"
+                            },
+                            {
+                                "label": "Bio",
+                                "format": "text",
+                                "field": "biography"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
