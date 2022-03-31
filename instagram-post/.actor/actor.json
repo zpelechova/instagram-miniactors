@@ -1,13 +1,13 @@
 {
     "actorSpecification": 1,
-    "name": "instagram-hashtag-scraper",
-    "title": "Instagram hashtag Scraper",
+    "name": "instagram-post-scraper",
+    "title": "Instagram post Scraper",
     "description": "Scrapes Instagram posts based on Hashtag",
     "version": "0.0.1",
     "storages": {
       "dataset": {
         "actorSpecification": 1,
-        "title": "Instagram Hashtag Scraper",
+        "title": "Instagram Post Scraper",
         "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
         "views": {
           "overview": {
