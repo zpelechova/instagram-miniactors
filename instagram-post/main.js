@@ -11,8 +11,6 @@ Apify.main(async () => {
     } else {
         console.log("What are you trying to get? It seems you forgot to add any input.")
     }
-    
-    usernames = Array.from(new Set(input.usernames))
 
     let directUrls = [];
     for (const u in usernames) {

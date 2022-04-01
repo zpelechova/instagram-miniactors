@@ -5,9 +5,9 @@
     "schemaVersion": 1,
     "properties": {
         "username": {
-            "title": "Instagram username",
+            "title": "Instagram usernames",
             "type": "array",
-            "description": "Provide a profile URL of the account you want to scrape the posts from.",
+            "description": "Provide names or the profile URLs of the accounts you want to scrape the posts from.",
             "editor": "stringList",
             "prefill": ["apifytech"]
         },
