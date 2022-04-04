@@ -14,7 +14,7 @@ Apify.main(async () => {
 
     console.log("1 - " + usernames);
 
-    usernames = Array.from(new Set(input.usernames))
+    usernames = Array.from(new Set(usernames))
 
     console.log("2 - " + usernames);
     
