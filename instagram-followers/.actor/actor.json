@@ -1,69 +1,65 @@
 {
-    "actorSpecification": 1,
-    "name": "instagram-profile-scraper",
-    "title": "Instagram Profile Scraper",
-    "description": "Scrapes Instagram profiles",
-    "version": "0.0.1",
-    "storages": {
-        "dataset": {
-            "actorSpecification": 1,
-            "title": "Instagram Profile Scraper",
-            "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
-            "views": {
-                "overview": {
-                    "title": "Overview",
-                    "description": "",
-                    "transformation": {
-                        "fields": [
-                            "profile_pic_url",
-                            "username",
-                            "full_name",
-                            "is_private",
-                            "is_verified",
-                            "followedUsername",
-                            "followedFollowersCount",
-                            "followedUrl"
-                        ]
-                    },
-                    "display": {
-                        "component": "table",
-                        "columns": [
-                            { "label": "profile_pic_url",
-                                "format": "image",
-                                "field": "profile_pic_url"
-                            },
-                            { "label": "username",
-                                "format": "text",
-                                "field": "username"
-                            },
-                            { "label": "full_name",
-                                "format": "text",
-                                "field": "full_name"
-                            },
-                            { "label": "is_private",
-                                "format": "text",
-                                "field": "is_private"
-                            },
-                            { "label": "is_verified",
-                                "format": "text",
-                                "field": "is_verified"
-                            },
-                            { "label": "followedUsername",
-                                "format": "text",
-                                "field": "followedUsername"
-                            },
-                            { "label": "followedFollowersCount",
-                                "format": "number",
-                                "field": "followedFollowersCount"
-                            },
-                            { "label": "followedUrl",
-                                "format": "link",
-                                "field": "followedUrl"
-                            }
-                        ]
-                    }
-                }
-            }
+  "actorSpecification": 1,
+  "name": "instagram-profile-scraper",
+  "title": "Instagram Profile Scraper",
+  "description": "Scrapes Instagram profiles",
+  "version": "0.0.1",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Instagram Profile Scraper",
+      "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "description": "",
+          "transformation": {
+            "fields": [
+              "profile_pic_url",
+              "username",
+              "full_name",
+              "is_private",
+              "is_verified",
+              "followedUsername",
+              "followedFollowersCount",
+              "followedUrl"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "columns": [
+              { "label": "", "format": "image", "field": "profile_pic_url" },
+              { "label": "Username", "format": "text", "field": "username" },
+              { "label": "Full name", "format": "text", "field": "full_name" },
+              {
+                "label": "Private?",
+                "format": "text",
+                "field": "is_private"
+              },
+              {
+                "label": "Verified?",
+                "format": "text",
+                "field": "is_verified"
+              },
+              {
+                "label": "Followed username",
+                "format": "text",
+                "field": "followedUsername"
+              },
+              {
+                "label": "Followed count of followers",
+                "format": "number",
+                "field": "followedFollowersCount"
+              },
+              {
+                "label": "Followed url",
+                "format": "link",
+                "field": "followedUrl"
+              }
+            ]
+          }
         }
+      }
     }
+  }
 }
