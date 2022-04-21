@@ -15,68 +15,50 @@
                     "description": "",
                     "transformation": {
                         "fields": [
-                            "fullName",
-                            "profilePicUrl",
-                            "#debug",
+                            "profile_pic_url",
                             "username",
-                            "postsCount",
-                            "followersCount",
-                            "followsCount",
-                            "private",
-                            "verified",
-                            "isBusinessAccount",
-                            "biography"
+                            "full_name",
+                            "is_private",
+                            "is_verified",
+                            "followedUsername",
+                            "followedFollowersCount",
+                            "followedUrl"
                         ]
                     },
                     "display": {
                         "component": "table",
                         "columns": [
-                            {
-                                "label": "Name",
-                                "format": "textWithImage",
-                                "field": "$fullName",
-                                "imageUrlField": "$profilePicUrl"
+                            { "label": "profile_pic_url",
+                                "format": "image",
+                                "field": "profile_pic_url"
                             },
-                            {
-                                "label": "Username",
+                            { "label": "username",
+                                "format": "text",
+                                "field": "username"
+                            },
+                            { "label": "full_name",
+                                "format": "text",
+                                "field": "full_name"
+                            },
+                            { "label": "is_private",
+                                "format": "text",
+                                "field": "is_private"
+                            },
+                            { "label": "is_verified",
+                                "format": "text",
+                                "field": "is_verified"
+                            },
+                            { "label": "followedUsername",
+                                "format": "text",
+                                "field": "followedUsername"
+                            },
+                            { "label": "followedFollowersCount",
+                                "format": "number",
+                                "field": "followedFollowersCount"
+                            },
+                            { "label": "followedUrl",
                                 "format": "link",
-                                "field": "$#debug.request.url",
-                                "textField": "$username"
-                            },
-                            {
-                                "label": "Posts",
-                                "format": "number",
-                                "field": "postsCount"
-                            },
-                            {
-                                "label": "Followers",
-                                "format": "number",
-                                "field": "followersCount"
-                            },
-                            {
-                                "label": "Following",
-                                "format": "number",
-                                "field": "followsCount"
-                            },
-                            {
-                                "label": "Private",
-                                "format": "text",
-                                "field": "private"
-                            },
-                            {
-                                "label": "Verified",
-                                "format": "text",
-                                "field": "verified"
-                            },
-                            {
-                                "label": "Business",
-                                "format": "text",
-                                "field": "isBusinessAccount"
-                            },
-                            {
-                                "label": "Bio",
-                                "format": "text",
-                                "field": "biography"
+                                "field": "followedUrl"
                             }
                         ]
                     }
