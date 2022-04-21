@@ -1,4 +1,3 @@
-## Features
 Our free Instagram Followers Scraper allows you to scrape profile information from Instagram. Just add one or more Instagram usernames to get data on all users that follow them.
 
 ## Why scrape Instagram Followers?
