@@ -15,6 +15,9 @@ Instagram Followers Scraper is designed to be fast and easy to use so there aren
 6. Click run and wait for the datasets to be extracted.
 6. Download your data in JSON, XML, CSV, Excel, or HTML.
 
+## Using cookies to log in
+Instagram limits access to certain data (likes, post user data, followers, and other information) if a user is anonymous. You can provide cookies here to log in as a normal Instagram user (you can copy with a Chrome plugin like 'EditThisCookie'). Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. When cookies are used, the run is limited to concurrency 1 and one session, so that the account does not get banned too soon.
+
 ## Want to scrape Instagram hashtags, posts, or comments?
 Use our super fast and easy dedicated scrapers if you want to scrape specific Instagram data. Fewer settings to change and faster results. Just enter one or more Instagram usernames or URLs and click to scrape.
 

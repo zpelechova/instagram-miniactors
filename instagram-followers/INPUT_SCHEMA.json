@@ -1,6 +1,6 @@
 {
     "title": "Input schema for Instagram Posts scraper",
-    "description": "Get data from Instagram profiles <br/> <strong>Important: Residential proxy is required to use this scraper!</strong> <br/> If you don't have them, please contact us on support@apify.com",
+    "description": "Get data about Instagram followers.",
     "type": "object",
     "schemaVersion": 1,
     "properties": {
@@ -20,12 +20,10 @@
             "prefill": 100
         },
         "loginCookies": {
-            "title": "Cookies",
+            "title": "Cookies (read the test under '?' to see how and why this is needed)",
             "type": "array",
-            "description": "If you want to sign in to Instagram so that you will have access to more data than with an anonymous profile, but do not wish to save your credentials in input, then you can use your cookies.",
             "editor": "json",
-            "sectionCaption": "Login",
-            "sectionDescription": "Instagram limits access to certain data (likes, post user data, followers, and other information) if a user is anonymous. You can provide cookies here to log in as a normal Instagram user (you can copy with a Chrome plugin like 'EditThisCookie'). Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. When cookies are used, the run is limited to concurrency 1 and one session, so that the account does not get banned too soon."
+            "description": "Instagram limits access to certain data (likes, post user data, followers, and other information) if a user is anonymous. You can provide cookies here to log in as a normal Instagram user (you can copy with a Chrome plugin like 'EditThisCookie'). Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. When cookies are used, the run is limited to concurrency 1 and one session, so that the account does not get banned too soon."
         }
     },
     "required": ["usernames", "loginCookies"]
