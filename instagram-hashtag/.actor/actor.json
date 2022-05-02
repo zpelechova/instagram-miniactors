@@ -48,7 +48,7 @@
               },
               {
                 "label": "Post URL",
-                "format": "text",
+                "format": "link",
                 "field": "url"
               },
               {
