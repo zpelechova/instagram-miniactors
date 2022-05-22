@@ -19,6 +19,8 @@ Apify.main(async () => {
     for (const u in usernames) {
         if (usernames[u].toLowerCase().includes('instagram.com/')) {
             directUrls.push(usernames[u])    
+        } else if (usernames[u] === '') {
+//get rid of empty lines
         } else {
             const directUrl = `https://www.instagram.com/${usernames[u]}`;
             directUrls.push(directUrl);
