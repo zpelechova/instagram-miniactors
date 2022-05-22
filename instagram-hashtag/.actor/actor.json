@@ -16,7 +16,6 @@
           "transformation": {
             "fields": [
               "displayUrl",
-              "position",
               "caption",
               "ownerFullName",
               "ownerUsername",
@@ -31,11 +30,6 @@
           "display": {
             "component": "table",
             "columns": [
-              {
-                "label": "Position",
-                "format": "number",
-                "field": "position"
-              },
               {
                 "label": "Post",
                 "format": "image",

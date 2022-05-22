@@ -9,7 +9,7 @@
       "actorSpecification": 1,
       "title": "Instagram Comment Scraper",
       "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
-      "views": {
+      "views": { 
         "overview": {
           "title": "Overview",
           "description": "",
@@ -18,7 +18,6 @@
               "postId",
               "shortCode",
               "text",
-              "position",
               "timestamp",
               "ownerId",
               "ownerIsVerified",
@@ -29,8 +28,6 @@
           "display": {
             "component": "table",
             "columns": [
-
-              { "label": "Position", "format": "text", "field": "position" },
               { "label": "Text", "format": "text", "field": "text" },
               {
                 "label": "Commenter",
