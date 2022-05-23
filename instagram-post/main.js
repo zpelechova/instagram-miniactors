@@ -25,6 +25,16 @@ Apify.main(async () => {
         }
     }
     
+    let whichProxy = {
+        "useApifyProxy": true,
+        "apifyProxyGroups": ["RESIDENTIAL"]
+    };
+
+    if (input.loginCookies) {
+        whichProxy = {
+            "useApifyProxy": true
+        };
+    }
 
     const extendOutputFunction = async ({ data, item, itemSpec, page, request, customData, label }) => {
         return item;
@@ -34,10 +44,7 @@ Apify.main(async () => {
         ...input,
         directUrls,
         resultsType: "posts",
-        proxy: {
-            "useApifyProxy": true,
-            "apifyProxyGroups": ["RESIDENTIAL"]
-        },
+        proxy: whichProxy,
         extendOutputFunction
     });
 });

@@ -1,31 +1,30 @@
 {
-    "title": "Input schema for Instagram Posts scraper",
-    "description": "Get data about Instagram followers.",
-    "type": "object",
-    "schemaVersion": 1,
-    "properties": {
-        "usernames": {
-            "title": "Instagram username(s)",
-            "type": "array",
-            "description": "Provide a profile URL of the account you want to scrape the posts from.",
-            "editor": "stringList",
-            "prefill": ["humansofny"]
-        },
-        "followedByLimit": {
-            "title": "Maximum number of followers",
-            "type": "integer",
-            "description": "Set the maximum number of followers you want to scrape. The actor usually cannot overcome 10,000 followers limit.",
-            "editor": "number",
-            "unit": "users",
-            "prefill": 100
-        },
-        "loginCookies": {
-            "title": "Cookies (see how and why this is needed ->)",
-            "type": "array",
-            "editor": "json",
-            "description": "Instagram limits access to certain data (likes, post user data, followers, and other information) if a user is anonymous. You can provide cookies here to log in as a normal Instagram user (you can copy with a Chrome plugin like 'EditThisCookie'). Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. When cookies are used, the run is limited to concurrency 1 and one session, so that the account does not get banned too soon."
-        }
+  "title": "Input schema for Instagram Posts scraper",
+  "description": "Get data about Instagram followers.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "usernames": {
+      "title": "Instagram username(s)",
+      "type": "array",
+      "description": "Provide a profile URL of the account you want to scrape the posts from.",
+      "editor": "stringList",
+      "prefill": ["humansofny"]
     },
-    "required": ["usernames", "loginCookies"]
+    "followedByLimit": {
+      "title": "Maximum number of followers",
+      "type": "integer",
+      "description": "Set the maximum number of followers you want to scrape. The actor usually cannot overcome 10,000 followers limit.",
+      "editor": "number",
+      "unit": "users",
+      "prefill": 100
+    },
+    "loginCookies": {
+      "title": "Cookies: you must login to an account to get more results (see how to use ->)",
+      "type": "array",
+      "editor": "json",
+      "description": "Instagram limits access to certain data (likes, post user data, followers, and other information) if a user is anonymous. You can provide cookies here to log in as a normal Instagram user (you can copy with a Chrome plugin like 'EditThisCookie'). Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. When cookies are used, the run is limited to concurrency 1 and one session, so that the account does not get banned too soon."
+    }
+  },
+  "required": ["usernames", "loginCookies"]
 }
-         

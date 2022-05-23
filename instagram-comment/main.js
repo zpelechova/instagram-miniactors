@@ -7,13 +7,21 @@ Apify.main(async () => {
         return item;
     }
 
+    let whichProxy = {
+        "useApifyProxy": true,
+        "apifyProxyGroups": ["RESIDENTIAL"]
+    };
+
+    if (input.loginCookies) {
+        whichProxy = {
+            "useApifyProxy": true
+        };
+    }
+
     await Apify.metamorph('jaroslavhejlek/instagram-scraper', {
         ...input,
         resultsType: "comments",
-        proxy: {
-            "useApifyProxy": true,
-            "apifyProxyGroups": ["RESIDENTIAL"]
-        },
+        proxy: whichProxy,
         extendOutputFunction
     });
 });
