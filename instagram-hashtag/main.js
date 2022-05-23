@@ -18,6 +18,17 @@ Apify.main(async () => {
         }
     }
 
+    let whichProxy = {
+        "useApifyProxy": true,
+        "apifyProxyGroups": ["RESIDENTIAL"]
+    };
+
+    if (input.loginCookies) {
+        whichProxy = {
+            "useApifyProxy": true
+        };
+    }
+
     const extendOutputFunction = async ({ data, item, itemSpec, page, request, customData, label }) => {
         item.fullName = item.owner && item.owner.full_name ? item.owner.full_name : 'owner didnt open';
         if (item.owner) { delete item.owner; }
@@ -30,10 +41,7 @@ Apify.main(async () => {
         searchType:  "hashtag",
         searchLimit: 1,
         expandOwners: true,
-        proxy: {
-            "useApifyProxy": true,
-            "apifyProxyGroups": ["RESIDENTIAL"]
-        },
+        proxy: whichProxy,
         directUrls,
         extendOutputFunction: extendOutputFunction.toString(),
     });

@@ -18,6 +18,12 @@
             "editor": "number",
             "unit": "per page",
             "prefill": 20
+        },
+        "loginCookies": {
+            "title": "Cookies: you can login to an account to get more results (see how to use ->)",
+            "type": "array",
+            "editor": "json",
+            "description": "Instagram limits access to certain data (likes, post user data, followers, and other information) if a user is anonymous. You can provide cookies here to log in as a normal Instagram user (you can copy with a Chrome plugin like 'EditThisCookie'). Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. When cookies are used, the run is limited to concurrency 1 and one session, so that the account does not get banned too soon."
         }
     },
     "required": ["username"]
