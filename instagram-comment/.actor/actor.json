@@ -9,7 +9,7 @@
       "actorSpecification": 1,
       "title": "Instagram Comment Scraper",
       "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
-      "views": { 
+      "views": {
         "overview": {
           "title": "Overview",
           "description": "",
@@ -46,7 +46,7 @@
               },              {
                 "label": "Post URL",
                 "format": "link",
-                "field": "$#debug.request.url"
+                "field": "#debug.request.url"
               }
             ]
           }

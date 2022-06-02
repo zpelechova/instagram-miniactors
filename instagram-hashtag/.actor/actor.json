@@ -33,7 +33,7 @@
               {
                 "label": "Post",
                 "format": "image",
-                "field": "$displayUrl"
+                "field": "displayUrl"
               },
               {
                 "label": "Text",
