@@ -1,0 +1,16 @@
+{
+    "title": "Input schema for Instagram Posts scraper",
+    "description": "Get data from Instagram profiles <br/> <strong>Important: Residential proxy is required to use this scraper!</strong> <br/> If you don't have them, please contact us on support@apify.com",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "usernames": {
+            "title": "Instagram username(s)",
+            "type": "array",
+            "description": "Provide a profile URL of the account you want to scrape the posts from.",
+            "editor": "stringList",
+            "prefill": ["apifytech"]
+        }
+    },
+    "required": ["usernames"]
+}
