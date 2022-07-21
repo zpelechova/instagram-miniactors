@@ -1,29 +1,29 @@
 {
     "title": "Input schema for Instagram profile scraper",
-    "description": "Set up Instagram profile scraper to get posts from Instagram profile URL. Get data from Instagram profiles <br/> <strong>Important: This scraper doesn't extract emails or any other contact details!</strong> <br/>",
+    "description": "Set up this simple scraper to get posts from Instagram profiles. To try it out, just type in a username or paste a URL, click on &#9655; <b> Start </b> and your data is on its way! If you need any guidance, just <a href='https://www.youtube.com/watch?v=qF9n4y4bjVk' target='_blank' rel='noopener'>follow this video tutorial</a>. <br> <strong>",
     "type": "object",
     "schemaVersion": 1,
     "properties": {
         "username": {
             "title": "Instagram username",
             "type": "array",
-            "description": "Provide a profile URL of the account you want to scrape the posts from.",
+            "description": "Just insert a username or URL of the profile you want to get the posts from.",
             "editor": "stringList",
-            "prefill": ["apifytech"]
+            "prefill": ["zelenskiy_official"]
         },
         "resultsLimit": {
-            "title": "Maximum posts",
+            "title": "Maximum posts per profile",
             "type": "integer",
-            "description": "How many posts you want to maximally scrape from each profile. If you set this to 5, you will get 5 posts for each URL provided (if you provide 2 URLs you will get 10 results altogether.",
+            "description": "Maximum number of posts you want to scrape per profile. If you set it to 5, you'll get 5 posts for each profile you've included. \n Instagram show only limited amount of posts (about 24) if you are not logged in. If you want more please log into an account on Instagram in the cookies section bellow.",
             "editor": "number",
             "unit": "per page",
-            "prefill": 20
+            "prefill": 30
         },
         "loginCookies": {
-            "title": "Cookies: you can login to an account to get more results (see how to use ->)",
+            "title": "Use cookies to log into an account for more results (read more →)",
             "type": "array",
             "editor": "json",
-            "description": "Instagram limits access to certain data (likes, post user data, followers, and other information) if a user is anonymous. You can provide cookies here to log in as a normal Instagram user (you can copy with a Chrome plugin like 'EditThisCookie'). Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. When cookies are used, the run is limited to concurrency 1 and one session, so that the account does not get banned too soon."
+            "description": "Instagram limits access to certain data if a user is anonymous. You can get more Instagram posts if you provide cookies to log in as a regular Instagram user. <br> Note that we recommend that you do not use your own Instagram account for this - use a new, temporary Instagram account. </br> <a href='https://docs.apify.com/tutorials/log-in-by-transferring-cookies#install-a-cookie-editor' target='_blank' rel='noopener'> Check out this tutorial on installing a cookie editor. </a>"
         }
     },
     "required": ["username"]
