@@ -1,5 +1,5 @@
 {
-    "title": "Input schema for Instagram profile scraper",
+    "title": "Input schema for Instagram post scraper",
     "description": "Set up this simple scraper to get posts from Instagram profiles. To try it out, just type in a username or paste a URL, click on &#9655; <b> Start </b> and your data is on its way! If you need any guidance, just <a href='https://www.youtube.com/watch?v=qF9n4y4bjVk' target='_blank' rel='noopener'>follow this video tutorial</a>. <br> <strong>",
     "type": "object",
     "schemaVersion": 1,
