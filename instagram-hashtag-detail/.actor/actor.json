@@ -34,14 +34,14 @@
                             {
                                 "label": "Name",
                                 "format": "textWithImage",
-                                "field": "$fullName",
-                                "imageUrlField": "$profilePicUrl"
+                                "field": "fullName",
+                                "imageUrlField": "profilePicUrl"
                             },
                             {
                                 "label": "Username",
                                 "format": "link",
-                                "field": "$#debug.request.url",
-                                "textField": "$username"
+                                "field": "#debug.request.url",
+                                "textField": "username"
                             },
                             {
                                 "label": "Posts",
